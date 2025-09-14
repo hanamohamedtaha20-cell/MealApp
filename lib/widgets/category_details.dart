@@ -10,8 +10,20 @@ class CategoryDetails extends StatelessWidget {
     List<Meal> mealsFilter = meals.where((value){
       return value.categoryNumber == data["id"];
     }).toList();
-
+    if (mealsFilter.isEmpty) {
+      return const Center(
+        child: Text(
+          "No menu available",
+          style: TextStyle(
+            fontSize: 18,
+            color: Colors.grey,
+          ),
+        ),
+      );
+    }
     return  ListView.builder(itemBuilder: (context , index){
+
+
       return Container(
         width: double.infinity,
         height: 150,
