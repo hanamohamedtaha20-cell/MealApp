@@ -24,15 +24,19 @@ class CategoryDetails extends StatelessWidget {
         child: Row(
           children: [
             Image.asset(mealsFilter[index].imageUrl,
+            width: 150,
+            height: 150,
             fit: BoxFit.cover,
             ),
-            SizedBox(width: 25,),
-            Text(mealsFilter[index].title,
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.white
-            ),),
-            SizedBox(width: 30,),
+            SizedBox(width: 20,),
+            Expanded(
+              child: Text(mealsFilter[index].title,
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white
+              ),),
+            ),
+            SizedBox(width: 15,),
             Icon(
                 Icons.arrow_forward_ios,
                 color: Colors.white,
