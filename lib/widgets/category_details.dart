@@ -22,8 +22,6 @@ class CategoryDetails extends StatelessWidget {
       );
     }
     return  ListView.builder(itemBuilder: (context , index){
-
-
       return Container(
         width: double.infinity,
         height: 150,
